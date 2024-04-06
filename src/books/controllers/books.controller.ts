@@ -8,7 +8,7 @@ import {
   Delete,
   UseGuards,
   Req,
-  Query, HttpStatus, HttpException,
+  Query,
 } from '@nestjs/common';
 
 import { BooksService } from '../services/books.service';
@@ -18,11 +18,13 @@ import { JwtAuthGuard } from '../../auth/guards/jwt.guard';
 import { AuthResponseDto } from '../../auth/dto/auth-response.dto';
 import {
   ApiBearerAuth,
-  ApiBody, ApiHeader,
+  ApiBody,
+  ApiHeader,
   ApiOperation,
   ApiParam,
   ApiQuery,
-  ApiResponse, ApiTags,
+  ApiResponse,
+  ApiTags,
 } from '@nestjs/swagger';
 
 @ApiTags('Books')
