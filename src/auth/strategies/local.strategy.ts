@@ -20,7 +20,7 @@ export class LocalStrategy extends PassportStrategy(Strategy) {
     });
     if (!user) {
       throw new HttpException(
-        'Invalid email or password!',
+        'Неверная почта или пароль!',
         HttpStatus.UNAUTHORIZED,
       );
     }

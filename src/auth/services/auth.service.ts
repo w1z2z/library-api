@@ -24,7 +24,7 @@ export class AuthService {
     }
     const isPasswordValid = await bcrypt.compare(password, findUser.password);
     if (!isPasswordValid) {
-      throw new HttpException('Invalid password!', HttpStatus.UNAUTHORIZED);
+      throw new HttpException('Неверный пароль!', HttpStatus.UNAUTHORIZED);
     }
     const user = { id: findUser.id, email: findUser.email };
 
